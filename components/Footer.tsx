@@ -30,7 +30,7 @@ const Footer = () => {
               <FooterColumn title={columns.title}>
                 <ul className="regular-14 flex flex-col gap-4 text-gray-30">
                   {columns.links.map((link) => (
-                    <Link href="/" key={link}>
+                    <Link href="/" key={link} className="hover:font-bold transition-all duration-75">
                       {link}
                     </Link>
                   ))}

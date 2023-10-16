@@ -93,15 +93,14 @@ const Navbar = () => {
         />
       </div>
 
-      <button onClick={toggleMenu}>
-        <Image
-          src="menu.svg"
-          alt="menu"
-          width={32}
-          height={32}
-          className="inline-block cursor-pointer lg:hidden"
-        />
+      <button
+        onClick={toggleMenu}
+        className="inline-block cursor-pointer lg:hidden"
+      >
+        <Image src="menu.svg" alt="menu" width={32} height={32} />
       </button>
+
+      
       <AnimatePresence>
         {toggle && (
           <motion.div
@@ -137,11 +136,11 @@ const Navbar = () => {
                 exit="initial"
               >
                 {NAV_LINKS.map((link) => (
-                  <div className="overflow-hidden">
+                  <div className="overflow-hidden text-center">
                     <motion.div
                       variants={mobileLinkVars}
                       key={link.key}
-                      className="regular-32 text-black flexCenter cursor-pointer pb-2.5 transition-all hover:font-bold uppercase"
+                      className="regular-32 text-gray-50 flexCenter cursor-pointer pb-2.5 transition-all hover:font-bold uppercase"
                     >
                       {link.label}
                     </motion.div>
